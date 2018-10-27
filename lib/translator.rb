@@ -12,6 +12,7 @@ def get_english_meaning
   # code goes here
 end
 
+require 'pry'
 require 'yaml'
 
 def load_library(file_path)
@@ -20,6 +21,7 @@ def load_library(file_path)
     english, japanese = array
     library["get_emoticon"][english] = japanese
     library["get_meaning"][japanese] = meaning
+  binding.pry
   end
   library
 end
